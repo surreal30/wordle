@@ -1,4 +1,5 @@
-answer_word = input("Word of the day: ")
+import getpass
+answer_word = getpass.getpass("Word of the day: ")
 l1 = list(answer_word)
 print("""Rules:
 1. You have total 6 tries to guess the word correctly.
