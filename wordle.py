@@ -4,8 +4,8 @@ answer_word = getpass.getpass("Word of the day: ")
 l1 = list(answer_word)
 print("""Rules:
 1. You have total 6 tries to guess the word correctly.
-2. If the letter of the word is correct at the corresponsing place of the answer. It will print G at that place.
-3. If the letter is wrong it will print B.
+2. If the letter of the word is correct at the corresponsing place of the answer. It will print """, emoji.emojize(':green_square:'), """ at that place.
+3. If the letter is wrong it will print """, emoji.emojize(':brown_square:'), """.
 """)
 for i in range(1, 6):
 	try_word = input("Enter your try:  ")
@@ -19,9 +19,10 @@ for i in range(1, 6):
 		else:
 			trial.append(emoji.emojize(':brown_square:'))
 	if(fg==5):
-		print("Correct word! ", answer_word)
+		print("Correct word! ", ' '.join(map(str, trial)))
+		print(answer_word)
 		break
 	else:
-		print("Oops! Something is not quite right! Try again ", trial)
+		print("Oops! Something is not quite right! Try again ", ' '.join(map(str, trial)))
 if(fg!=5):
 	print("Better luck next time. The word is: ", answer_word)
