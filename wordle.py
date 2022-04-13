@@ -1,4 +1,5 @@
 import getpass
+import emoji
 answer_word = getpass.getpass("Word of the day: ")
 l1 = list(answer_word)
 print("""Rules:
@@ -13,10 +14,10 @@ for i in range(1, 6):
 	fg = 0
 	for j in range(5):
 		if(l1[j] == l2[j]):
-			trial.append("G")
+			trial.append(emoji.emojize(':green_square:'))
 			fg += 1
 		else:
-			trial.append("B")
+			trial.append(emoji.emojize(':brown_square:'))
 	if(fg==5):
 		print("Correct word! ", answer_word)
 		break
