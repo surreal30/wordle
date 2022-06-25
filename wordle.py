@@ -1,6 +1,6 @@
 import getpass
 import emoji
-answer_word = getpass.getpass("Word of the day: ")
+answer_word = getpass.getpass("Word of the day: (Note: It should be 5 characters long.")
 l1 = list(answer_word)
 print("""Rules:
 1. You have total 6 tries to guess the word correctly.
